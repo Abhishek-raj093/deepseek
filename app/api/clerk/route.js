@@ -47,5 +47,5 @@ export async function POST(req) {
             break;
     }
 
-    return NextRequest.json({ message: "Event Received" })
+    return NextRequest.json({ message: "Event Received" });
 }
