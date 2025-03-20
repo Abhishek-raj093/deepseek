@@ -2,7 +2,7 @@ import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import React, { useState } from 'react'
 import { useClerk, UserButton } from '@clerk/nextjs'
-import { useAppContext } from '@/confid/context/AppContext'
+import { useAppContext } from '@/config/context/AppContext'
 import ChatLabel from './ChatLabel'
 
 const Sidebar = ({expand, setExpand}) => {
