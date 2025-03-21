@@ -1,6 +1,6 @@
 import { Webhook } from "svix";
 import connectDB from "@/config/db";
-import User from "@/models/User";
+import User from "@/config/models/User";
 import { headers } from "next/headers";
 import { NextRequest } from "next/server";
 
@@ -17,7 +17,7 @@ export async function POST(req) {
 
     const payload = await req.json();
     const body = JSON.stringify(payload);
-    const { data, type } = wh.verify(body, svixHeaders);
+    const { data, type } = wh.verify(body, svixHeaders)
 
     // Prepare the user data to be saved in the database
 
