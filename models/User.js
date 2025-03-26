@@ -7,7 +7,7 @@ const UserSchema = new mongoose.Schema(
         email: {type: String, required: true},
         image: {type: String, required: false}
     },
-    {timestamps: true}
+    {timestamp: true}
 );
 
 const User = mongoose.models.User || mongoose.model("User", UserSchema)
