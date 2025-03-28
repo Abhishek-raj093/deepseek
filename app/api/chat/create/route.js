@@ -1,5 +1,5 @@
-import connectDB from "@/config/db";
-import Chat from "@/models/Chat";
+import connectDB from "@/config/db.js";
+import Chat from "@/models/Chat.js";
 import { getAuth } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
@@ -8,7 +8,7 @@ export async function POST(req){
         const { userId } = getAuth(req);
 
         if (!userId) {
-            return NextResponse.json({ success: flightRouterStateSchema, message: "User not authenticated" });
+            return NextResponse.json({ success: false, message: "User not authenticated" });
         }
 
         // Prepare the Chat data to be saved in the database
